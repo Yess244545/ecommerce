@@ -20,9 +20,9 @@ const Categories = ({setCategory}) => {
   return (
     
         <ul className='categories'>
-            <li onClick={()=>handleClickCategory("")}> <a href="all">All products</a> </li>
+            <li onClick={()=>handleClickCategory("")}>All products</li>
             {
-                categories.map(category=> <li onClick={()=>handleClickCategory(category.id)} key={category.id}> <a href={category.name}>{category.name}</a> </li>)
+                categories.map(category=> <li onClick={()=>handleClickCategory(category.id)} key={category.id}>{category.name} </li>)
 
             }
         </ul>
