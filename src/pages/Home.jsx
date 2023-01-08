@@ -35,24 +35,20 @@ const Home = () => {
     
   return (
     <div className='home'>
-      <div>
+      <div className='home__container-form'>
+      <Categories setCategory={setCategory}/>
       <form className='home__form' onSubmit={handleSubmit}>
             <div className='home__form-div'>
               <input className='home__form-input' type="text" id='nameProduct' placeholder='what are you looking for?'/>
               <button className='home__form-btn'><i className='bx bx-search'></i></button>
             </div>
           </form>
-        <Categories setCategory={setCategory}/>
-
-      </div>
-      
-      <section>
-          
-          <section className='home__containerProducts'>
+        
+      </div> 
+      <section className='home__containerProducts'>
             {
               filterProducts.map(product=> <ProductCard key={product.id} product={product}/>)
             }
-          </section>
       </section>
       
     </div>
